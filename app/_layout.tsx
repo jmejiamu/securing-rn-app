@@ -19,6 +19,15 @@ export default function RootLayout() {
           headerShown: false,
         }}
       />
+
+      <Drawer.Screen
+        name="access-refresh-token" // This is the name of the page and must match the url from root
+        options={{
+          drawerLabel: "Access Refresh Token",
+          title: "Access Refresh Token",
+          headerShown: false,
+        }}
+      />
     </Drawer>
   );
 }
