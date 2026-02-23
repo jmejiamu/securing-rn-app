@@ -31,7 +31,6 @@ export const apiFetch = async (
     ...options.headers,
     Authorization: `Bearer ${accessToken}`,
   };
-  //TODO: Change startsWith http to https once in production
   const fullUrl = url.startsWith("http") ? url : `${API_URL}${url}`;
 
   try {

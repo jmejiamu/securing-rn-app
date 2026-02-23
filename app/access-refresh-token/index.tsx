@@ -1,3 +1,4 @@
+import DrawerNav from "@/components/DrawerNav/DrawerNav";
 import { apiFetch, tokenStorage } from "@/utils/apiFetch";
 import React, { useState } from "react";
 import { Pressable, StyleSheet, Text, TextInput, View } from "react-native";
@@ -55,6 +56,9 @@ const AccessRefreshToken = () => {
 
   return (
     <View style={styles.screen}>
+      <View style={{ marginBottom: 16 }}>
+        <DrawerNav />
+      </View>
       <View style={styles.card}>
         <Text style={styles.title}>Access vs Refresh</Text>
         <Text style={styles.subtitle}>Token demo</Text>
