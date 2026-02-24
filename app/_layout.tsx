@@ -28,6 +28,14 @@ export default function RootLayout() {
           headerShown: false,
         }}
       />
+      <Drawer.Screen
+        name="rate-limit" // This is the name of the page and must match the url from root
+        options={{
+          drawerLabel: "Rate Limit Demo",
+          title: "Rate Limit Demo",
+          headerShown: false,
+        }}
+      />
     </Drawer>
   );
 }
