@@ -36,6 +36,14 @@ export default function RootLayout() {
           headerShown: false,
         }}
       />
+      <Drawer.Screen
+        name="password-hashing" // This is the name of the page and must match the url from root
+        options={{
+          drawerLabel: "Password Hashing Demo",
+          title: "Password Hashing Demo",
+          headerShown: false,
+        }}
+      />
     </Drawer>
   );
 }
