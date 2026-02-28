@@ -16,13 +16,13 @@ export default function ValidationScreen() {
   const [password, setPassword] = useState("1234");
 
   async function register() {
-    // const result = AuthSchema.safeParse({ email, password });
+    const result = AuthSchema.safeParse({ email, password });
 
-    // if (!result.success) {
-    //   const messages = result.error?.issues.map((i) => i.message).join(", ");
-    //   Alert.alert("Validation Error", messages || "Unknown error");
-    //   return;
-    // }
+    if (!result.success) {
+      const messages = result.error?.issues.map((i) => i.message).join(", ");
+      Alert.alert("Validation Error", messages || "Unknown error");
+      return;
+    }
     try {
       const res = await fetch(`${API_BASE_URL}/auth/register`, {
         method: "POST",
